@@ -28,7 +28,11 @@ export default function Homepage({ organizations, setOrganizations }) {
               <Card>
                 <Image src={element.logo} />
                 <h2 className="text-center">{element.name}</h2>
-                <Button onClick={() => {setSelectedOrg(element); handleOrg(true)}}>More Info</Button>
+                <Button onClick={handleOrg}>More Info</Button>
+                <Modal show={org}>
+                  <Modal.Title>{element.name}</Modal.Title>
+
+                </Modal>
               </Card>
             </Col>
           ))}
@@ -36,14 +40,14 @@ export default function Homepage({ organizations, setOrganizations }) {
       </Container>
       }
 
-      {selectedOrg && (
+      {/* {selectedOrg && (
         <Modal org={org} size="xl">
           <Modal.Header>
             <Modal.Title>{selectedOrg.name}</Modal.Title>
           </Modal.Header>
 
-        </Modal>
-      )}
+        </Modal> */}
+      {/* )} */}
     </div>
     </>
   );
