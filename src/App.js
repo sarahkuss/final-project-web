@@ -1,8 +1,9 @@
 
 import { useState } from 'react';
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Homepage from './scenes/Homepage';
+import OrganizationList from './components/OrganizationList';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [organizations, setOrganizations] = useState('')
@@ -11,7 +12,7 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Homepage organizations={organizations} setOrganizations={setOrganizations}/>} />
+        <Route path='/' element={<OrganizationList organizations={organizations} setOrganizations={setOrganizations}/>} />
       </Routes>
     </BrowserRouter>
     </>
