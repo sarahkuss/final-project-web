@@ -38,7 +38,7 @@ export default function OrganizationList({ organizations, setOrganizations }) {
                   <Modal.Header>
                     <Image src={thisOrg?.speciesImage} fluid/>
                   </Modal.Header>
-                  <Modal.Title className="text-center">{thisOrg?.name}</Modal.Title>
+                  <Modal.Title className="text-center">{thisOrg?.orgName}</Modal.Title>
                   <Modal.Body>{thisOrg?.about}</Modal.Body>
                   <Modal.Footer>
                     <Button onClick={handleClose}>Close</Button>
