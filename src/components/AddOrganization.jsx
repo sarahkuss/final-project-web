@@ -1,8 +1,12 @@
 import { useState } from "react"
-import { Button, Form } from "react-bootstrap"
+import { Button, Form, Modal } from "react-bootstrap"
 
 export default function AddOrganization ({setOrganizations}) {
   const [orgName, setOrgName] = useState()
+  const [openModal, setOpenModal] = useState(false)
+
+  const handleOpen = () => setOpenModal(true)
+  const handleClose = () => setOpenModal(false)
   
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -26,6 +30,8 @@ export default function AddOrganization ({setOrganizations}) {
   
   return(
     <>
+    <Button onClick={handleOpen}>Add Organization</Button>
+    <Modal show={openModal} onHide={handleClose}>
     <Form onSubmit={handleSubmit}>
       <Form.Group>
         <Form.Label>Organization Name</Form.Label>
@@ -37,6 +43,9 @@ export default function AddOrganization ({setOrganizations}) {
       </Form.Group>
       <Button type="submit">Save</Button>
     </Form>
+
+    </Modal>
+
     </>
   )
 }
