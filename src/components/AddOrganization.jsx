@@ -3,6 +3,7 @@ import { Button, Form, Modal } from "react-bootstrap"
 
 export default function AddOrganization ({setOrganizations}) {
   const [orgName, setOrgName] = useState()
+  const [missionStatement, setMissionStatement] = useState()
   const [openModal, setOpenModal] = useState(false)
 
   const handleOpen = () => setOpenModal(true)
@@ -15,11 +16,11 @@ export default function AddOrganization ({setOrganizations}) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({orgName})
+      body: JSON.stringify({orgName, missionStatement})
     })
     .then(resp => resp.json())
     .then(data => {
-      if(data.messaage) {
+      if(data.message) {
         alert(data.message)
         return
       }
@@ -32,17 +33,27 @@ export default function AddOrganization ({setOrganizations}) {
     <>
     <Button onClick={handleOpen}>Add Organization</Button>
     <Modal show={openModal} onHide={handleClose}>
-    <Form onSubmit={handleSubmit}>
-      <Form.Group>
-        <Form.Label>Organization Name</Form.Label>
-        <Form.Control 
-          type="text"
-          value={orgName}
-          required={true}
-          onChange={(e) => {setOrgName(e.target.value)}} />
-      </Form.Group>
-      <Button type="submit">Save</Button>
-    </Form>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group>
+          <Form.Label>Organization Name</Form.Label>
+          <Form.Control 
+            type="text"
+            value={orgName}
+            required={true}
+            placeholder="Enter Organization"
+            onChange={e => setOrgName(e.target.value)} />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Mission Statement</Form.Label>
+          <Form.Control
+            type="text"
+            value={missionStatement}
+            required={true}
+            placeholder="Enter Mission Statement"
+            onChange={e => setMissionStatement(e.target.value)}/>
+        </Form.Group>
+        <Button type="submit">Save</Button>
+      </Form>
 
     </Modal>
 
