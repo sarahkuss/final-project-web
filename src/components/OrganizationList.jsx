@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row, Card, Image, Button, Modal, Spinner } from "react-bootstrap";
+import DeleteOrganization from "./DeleteOrganization";
 
 export default function OrganizationList({ organizations, setOrganizations }) {
   const [thisOrg, setThisOrg] = useState()
@@ -30,6 +31,7 @@ export default function OrganizationList({ organizations, setOrganizations }) {
               <Card className="mb-3">
                 <Card.Img variant= "top" src={element.logo} style={{height: 300, width:360}}/>
                 <Button className="bg-success" onClick={() => handleOpen(element)}>More Info</Button>
+                <DeleteOrganization setOrganizations={setOrganizations} orgId={element._id}/>
               </Card>
             </Col>
           ))}

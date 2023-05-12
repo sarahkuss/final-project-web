@@ -2,8 +2,8 @@ import { useState } from "react"
 import { Button, Form, Modal } from "react-bootstrap"
 
 export default function AddOrganization ({setOrganizations}) {
-  const [orgName, setOrgName] = useState()
-  const [missionStatement, setMissionStatement] = useState()
+  const [orgName, setOrgName] = useState("")
+  const [missionStatement, setMissionStatement] = useState("")
   const [openModal, setOpenModal] = useState(false)
 
   const handleOpen = () => setOpenModal(true)
@@ -25,6 +25,8 @@ export default function AddOrganization ({setOrganizations}) {
         return
       }
       setOrganizations(data)
+      setMissionStatement("")
+      setOrgName("")
     })
     .catch(alert)
   }
@@ -52,7 +54,7 @@ export default function AddOrganization ({setOrganizations}) {
             placeholder="Enter Mission Statement"
             onChange={e => setMissionStatement(e.target.value)}/>
         </Form.Group>
-        <Button type="submit">Save</Button>
+        <Button onClick={handleClose} type="submit">Save</Button>
       </Form>
 
     </Modal>
