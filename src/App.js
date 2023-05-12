@@ -6,8 +6,9 @@ import Learn from './scenes/Learn';
 import GetInvolved from './scenes/GetInvolved';
 import Login from './scenes/Login'
 import Signup from './scenes/Signup'
-import './App.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
   const [organizations, setOrganizations] = useState('')
