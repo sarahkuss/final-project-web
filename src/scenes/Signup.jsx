@@ -11,7 +11,7 @@ export default function Signup ({setUser}) {
 
   const handleSignup = (e) => {
     e.preventDefault()
-    fetch('https://final-project-conservation.web.app/organizations/signup', {
+    fetch('https://final-project-conservation.web.app/signup', {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({email, password})
@@ -23,20 +23,22 @@ export default function Signup ({setUser}) {
         return
       }
       setUser(data)
+      navigate('/')
     })
-    .catch(alert)
+    .catch(error => alert(`Error: ${error.message}`))
   }
 
   return (
     <>
     <ConservationNavbar />
     <Container>
-      <Row>
+      <Row className="justify-content-center m-2" lg={2}>
         <Form onSubmit={handleSignup}>
           <Form.Group>
             <Form.Label>Email Address</Form.Label>
             <Form.Control 
               type="email"
+              placeholder="Enter Email"
               value={email}
               onChange={e => setEmail(e.target.value)} />
           </Form.Group>
@@ -44,10 +46,11 @@ export default function Signup ({setUser}) {
             <Form.Label>Password</Form.Label>
             <Form.Control 
               type="password" 
+              placeholder="Enter Password"
               value={password}
               onChange={e => setPassword(e.target.value)}/>
           </Form.Group>
-          <Button onClick={handleSignup}>Sign Up</Button>
+          <Button onClick={handleSignup} className="mt-2">Sign Up</Button>
         </Form>
       </Row>
     </Container>

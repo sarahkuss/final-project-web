@@ -12,7 +12,7 @@ export default function Login ({setUser}) {
 
   const handleLogin = (e) => {
     e.preventDefault()
-    fetch('https://final-project-conservation.web.app/organizations/login', {
+    fetch('https://final-project-conservation.web.app/login', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
