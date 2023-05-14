@@ -24,6 +24,7 @@ export default function Signup ({setUser}) {
       }
       setUser(data)
       navigate('/')
+      
     })
     .catch(error => alert(`Error: ${error.message}`))
   }
