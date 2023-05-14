@@ -12,6 +12,7 @@ import './App.css';
 
 function App() {
   const [organizations, setOrganizations] = useState('')
+  const [user, setUser] = useState()
 
   return (
     <>
@@ -20,8 +21,8 @@ function App() {
         <Route path='/' element={<Homepage organizations={organizations} setOrganizations={setOrganizations}/>} />
         <Route path='/learn' element={<Learn />} />
         <Route path='/getinvolved' element={<GetInvolved />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
+        <Route path='/login' element={<Login setUser={setUser}/>} />
+        <Route path='/signup' element={<Signup setUser={setUser} />} />
       </Routes>
     </BrowserRouter>
     </>

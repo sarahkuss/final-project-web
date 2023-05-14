@@ -1,4 +1,6 @@
 import { Button } from "react-bootstrap"
+import { Trash3Fill } from "react-bootstrap-icons"
+
 
 
 export default function DeleteOrganization ({setOrganizations, orgId}) {
@@ -19,7 +21,7 @@ export default function DeleteOrganization ({setOrganizations, orgId}) {
   return (
     <>
     <Button onClick={handleDelete}>
-      Delete
+      <Trash3Fill />
     </Button>
     </>
   )
