@@ -3,7 +3,7 @@ import { Trash3Fill } from "react-bootstrap-icons"
 
 
 
-export default function DeleteOrganization ({setOrganizations, orgId}) {
+export default function DeleteOrganization ({setOrganizations, orgId, user}) {
   
   const handleDelete = (e) => {
     e.preventDefault()
@@ -20,9 +20,13 @@ export default function DeleteOrganization ({setOrganizations, orgId}) {
   
   return (
     <>
+    {!user ? (
+      <></>
+    ): (
     <Button className="justify-content-right" onClick={handleDelete}>
       <Trash3Fill />
     </Button>
+    )}
     </>
   )
 }

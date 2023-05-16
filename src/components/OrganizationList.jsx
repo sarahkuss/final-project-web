@@ -3,7 +3,7 @@ import { Col, Container, Row, Card, Image, Button, Modal, Spinner } from "react-
 import DeleteOrganization from "./DeleteOrganization";
 import '../styles/organizationList.css'
 
-export default function OrganizationList({ organizations, setOrganizations }) {
+export default function OrganizationList({ organizations, setOrganizations, user }) {
   const [thisOrg, setThisOrg] = useState()
   const [openModal, setOpenModal] = useState(false)
 
@@ -32,7 +32,7 @@ export default function OrganizationList({ organizations, setOrganizations }) {
               <Card className="m-2 p-2">
                 <Image variant= "top" src={element.logo} fluid />
                 <Button className="bg-success mb-1" onClick={() => handleOpen(element)}>More Info</Button>
-                <DeleteOrganization setOrganizations={setOrganizations} orgId={element._id}/>
+                <DeleteOrganization setOrganizations={setOrganizations} user={user} orgId={element._id}/>
               </Card>
             </Col>
           ))}

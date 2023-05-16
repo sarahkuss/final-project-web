@@ -1,0 +1,12 @@
+.add-button-col {
+  display: flex;
+  justify-content: right;
+  margin: 20px 0px; 
+}
+
+.organizations-text {
+  display: flex;
+  justify-content: left;
+  font-size: 30px;
+  font-weight: 600;
+}
