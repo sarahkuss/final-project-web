@@ -34,7 +34,6 @@ export default function Login ({setUser}) {
 
   return (
     <>
-    <ConservationNavbar />
     <Container>
       <Row lg={2} className="justify-content-center m-3">
           <Form onSubmit={handleLogin}>

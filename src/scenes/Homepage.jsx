@@ -6,7 +6,6 @@ import '../styles/organizationList.css'
 export default function Homepage ({organizations, setOrganizations}) {
   return(
     <>
-    <ConservationNavbar />
     <AddOrganization setOrganizations={setOrganizations} />
     <OrganizationList organizations={organizations} setOrganizations={setOrganizations} />
     </>

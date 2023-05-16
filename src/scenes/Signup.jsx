@@ -6,6 +6,8 @@ import ConservationNavbar from "../components/ConservationNavbar";
 export default function Signup ({setUser}) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
 
   const navigate = useNavigate()
 
@@ -14,7 +16,7 @@ export default function Signup ({setUser}) {
     fetch('https://final-project-conservation.web.app/signup', {
       method: "POST",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({email, password})
+      body: JSON.stringify({email, password, firstName, lastName})
     })
     .then(res => res.json())
     .then(data => {
@@ -31,10 +33,25 @@ export default function Signup ({setUser}) {
 
   return (
     <>
-    <ConservationNavbar />
     <Container>
       <Row className="justify-content-center m-2" lg={2}>
         <Form onSubmit={handleSignup}>
+          <Form.Group>
+            <Form.Label>First Name</Form.Label>
+            <Form.Control 
+              type="text"
+              placeholder="Enter First Name"
+              value={firstName}
+              onChange={e => setFirstName(e.target.value)}/>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control 
+              type="text"
+              placeholder="Enter Last Name"
+              value={lastName}
+              onChange={e => setLastName(e.target.value)}/>
+          </Form.Group>
           <Form.Group>
             <Form.Label>Email Address</Form.Label>
             <Form.Control 

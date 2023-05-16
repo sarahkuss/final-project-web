@@ -20,7 +20,7 @@ export default function DeleteOrganization ({setOrganizations, orgId}) {
   
   return (
     <>
-    <Button onClick={handleDelete}>
+    <Button className="justify-content-right" onClick={handleDelete}>
       <Trash3Fill />
     </Button>
     </>

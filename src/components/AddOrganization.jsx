@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Button, Form, Modal } from "react-bootstrap"
+import { Button, Form, Modal, Container, Row, Col } from "react-bootstrap"
 
 export default function AddOrganization ({setOrganizations}) {
   const [orgName, setOrgName] = useState("")
@@ -33,6 +33,10 @@ export default function AddOrganization ({setOrganizations}) {
   
   return(
     <>
+    <Container className="bg-danger">
+      <Row>
+        <Col className="justify-content-flex-end">
+
     <Button onClick={handleOpen}>Add Organization</Button>
     <Modal show={openModal} onHide={handleClose}>
       <Form onSubmit={handleSubmit}>
@@ -58,6 +62,9 @@ export default function AddOrganization ({setOrganizations}) {
       </Form>
 
     </Modal>
+        </Col>
+      </Row>
+    </Container>
 
     </>
   )
