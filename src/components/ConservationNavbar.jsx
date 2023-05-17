@@ -5,6 +5,7 @@ import '../styles/navbar.css'
 export default function ConservationNavbar ({user, setUser}) {
   const handleLogout = () => {
     setUser(null)
+    localStorage.clear()
   }
 
   return(

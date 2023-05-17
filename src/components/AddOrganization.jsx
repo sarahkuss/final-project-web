@@ -14,7 +14,7 @@ export default function AddOrganization ({setOrganizations, user}) {
   const handleClose = () => setOpenModal(false)
   
   const navigate = useNavigate()
-
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     fetch("https://final-project-conservation.web.app/organizations", {
@@ -35,6 +35,7 @@ export default function AddOrganization ({setOrganizations, user}) {
       setOrgName("")
       setLogo("")
       setWebsite("")
+      handleClose()
     })
     .catch(alert)
   }
@@ -91,7 +92,7 @@ export default function AddOrganization ({setOrganizations, user}) {
                   placeholder="Enter link to website"
                   onChange={e => setWebsite(e.target.value)}/>
               </Form.Group>
-              <Button onClick={handleClose} type="submit">Save</Button>
+              <Button onSubmit={handleClose} type="submit">Save</Button>
             </Form>
 
           </Modal>

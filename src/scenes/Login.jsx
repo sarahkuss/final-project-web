@@ -4,7 +4,7 @@ import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import ConservationNavbar from "../components/ConservationNavbar";
 
 
-export default function Login ({setUser}) {
+export default function Login ({user, setUser}) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -27,6 +27,7 @@ export default function Login ({setUser}) {
       }
       setUser(data.user)
       localStorage.setItem("token", data.token)
+      localStorage.setItem("user", JSON.stringify(user))
       navigate('/')
     })
     .catch(error => alert(`Error: ${error.message}`))

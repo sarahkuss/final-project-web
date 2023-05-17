@@ -36,7 +36,7 @@ export default function OrganizationList({ organizations, setOrganizations, user
                 <Image variant= "top" src={element.logo} fluid />
                 <Button className="bg-success mb-1" onClick={() => handleOpen(element)}>More Info</Button>
                 <DeleteOrganization setOrganizations={setOrganizations} user={user} orgId={element._id}/>
-                {/* <FavoriteButton user={user} orgId={element._id} /> */}
+                <FavoriteButton user={user} orgId={element._id} />
               </Card>
             </Col>
           ))}

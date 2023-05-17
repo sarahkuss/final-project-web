@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './scenes/Homepage';
 import Learn from './scenes/Learn';
@@ -15,7 +15,14 @@ function App() {
   const [organizations, setOrganizations] = useState('')
   const [user, setUser] = useState(null)
 
-  // console.log(user._id)
+  useEffect(() => {
+    if(!user){
+      const oldUser = JSON.parse(localStorage.getItem("user"))
+      if(oldUser) {setUser(oldUser)}
+    } else {
+      localStorage.setItem("user", JSON.stringify(user))
+    }
+  }, [user])
 
   return (
     <>
@@ -25,7 +32,7 @@ function App() {
         <Route path='/' element={<Homepage organizations={organizations} setOrganizations={setOrganizations} user={user} />} />
         <Route path='/learn' element={<Learn />} />
         <Route path='/getinvolved' element={<GetInvolved />} />
-        <Route path='/login' element={<Login setUser={setUser}/>} />
+        <Route path='/login' element={<Login setUser={setUser} user={user}/>} />
         <Route path='/signup' element={<Signup setUser={setUser} />} />
       </Routes>
     </BrowserRouter>
