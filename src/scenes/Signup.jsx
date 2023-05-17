@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Container, Row, Form } from "react-bootstrap";
-import ConservationNavbar from "../components/ConservationNavbar";
+
 
 export default function Signup ({setUser}) {
   const [email, setEmail] = useState('')

@@ -7,3 +7,11 @@
   background-color: #F2F1EE;
   font-size: 25px;
 }
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.sticky-top {
+  padding: 0 !important; 
+}

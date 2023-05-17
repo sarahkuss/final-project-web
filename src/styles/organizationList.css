@@ -1,4 +1,4 @@
-#organization .backdrop-filter {
+/* #organization .backdrop-filter {
   backdrop-filter: blur(2px);
   backdrop-filter: brightness(60%);
   backdrop-filter: contrast(40%);
@@ -9,10 +9,21 @@
   backdrop-filter: opacity(20%);
   backdrop-filter: sepia(90%);
   backdrop-filter: saturate(80%);
-}
+} */
+
+/* body {
+  background-image: url(/public/images/CLbg-removebg-preview.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */
 
 #organization {
-  background-color: #7b91e1a6;
+  background-color: #f9e8d041;
+  background-image: url(/public/images/CLbg-removebg-preview.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 

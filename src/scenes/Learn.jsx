@@ -1,4 +1,4 @@
-import ConservationNavbar from "../components/ConservationNavbar";
+import '../styles/learn.css'
 
 export default function Learn () {
   return (

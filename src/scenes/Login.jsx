@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
-import ConservationNavbar from "../components/ConservationNavbar";
+import '../styles/login.css'
+
 
 
 export default function Login ({user, setUser}) {
@@ -35,8 +36,10 @@ export default function Login ({user, setUser}) {
 
   return (
     <>
-    <Container>
-      <Row lg={2} className="justify-content-center m-3">
+    <Container className="login-container" fluid>
+      <Row lg={2} md={2} className="form-row ">
+        <Col className="form-col">
+          <h2>Login</h2>
           <Form onSubmit={handleLogin}>
             <Form.Group>
               <Form.Label>Email Address</Form.Label>
@@ -56,6 +59,8 @@ export default function Login ({user, setUser}) {
             </Form.Group>
             <Button onClick={handleLogin} className="mt-2">Submit</Button>
           </Form>
+      
+        </Col>
       </Row>
     </Container>
     </>
