@@ -15,6 +15,8 @@ function App() {
   const [organizations, setOrganizations] = useState('')
   const [user, setUser] = useState(null)
 
+  // console.log(user._id)
+
   return (
     <>
     <BrowserRouter>

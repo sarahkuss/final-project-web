@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row, Card, Image, Button, Modal, Spinner } from "react-bootstrap";
 import DeleteOrganization from "./DeleteOrganization";
+
 import '../styles/organizationList.css'
+import FavoriteButton from "../scenes/favoriteButton";
 
 export default function OrganizationList({ organizations, setOrganizations, user }) {
   const [thisOrg, setThisOrg] = useState()
@@ -19,13 +21,14 @@ export default function OrganizationList({ organizations, setOrganizations, user
       .catch(alert);
   }, []);
 
+
   return (
     <>
     
       {!organizations
         ? <Spinner animation="border" variant="success"> <span className="visually-hidden">Loading...</span></Spinner>
         :
-        <Container id="organization">
+        <Container id="organization" fluid>
         <Row>
         {organizations.map((element) => (
             <Col sm={12} md={6} lg={3} key={element._id} className="">
@@ -33,6 +36,7 @@ export default function OrganizationList({ organizations, setOrganizations, user
                 <Image variant= "top" src={element.logo} fluid />
                 <Button className="bg-success mb-1" onClick={() => handleOpen(element)}>More Info</Button>
                 <DeleteOrganization setOrganizations={setOrganizations} user={user} orgId={element._id}/>
+                {/* <FavoriteButton user={user} orgId={element._id} /> */}
               </Card>
             </Col>
           ))}
