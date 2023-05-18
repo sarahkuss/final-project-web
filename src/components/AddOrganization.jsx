@@ -42,8 +42,8 @@ export default function AddOrganization ({setOrganizations, user}) {
   
   return(
     <>
-    <Container fluid>
-      <Row className="mt-2">
+    <Container fluid className="add-container">
+      <Row>
         <Col className="organizations-text">Organizations:</Col>
         <Col className="add-button-col">
           {!user ? (

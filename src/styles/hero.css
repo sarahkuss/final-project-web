@@ -1,0 +1,14 @@
+.hero-container {
+  /* background-image: url('/public/images/CLbg-removebg-preview.png');
+  background-position: bottom;
+  background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  height: 60vh;
+  text-align: center;
+  background-color: rgba(251, 244, 235, 0.788);
+}
+
+/* .hero-container col {
+  display: flex;
+  justify-content: center;
+} */

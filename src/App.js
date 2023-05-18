@@ -29,7 +29,7 @@ function App() {
     <BrowserRouter>
     <ConservationNavbar user={user} setUser={setUser} />
       <Routes>
-        <Route path='/' element={<Homepage organizations={organizations} setOrganizations={setOrganizations} user={user} />} />
+        <Route path='/' element={<Homepage organizations={organizations} setOrganizations={setOrganizations} user={user} setUser={setUser} />} />
         <Route path='/learn' element={<Learn />} />
         <Route path='/getinvolved' element={<GetInvolved />} />
         <Route path='/login' element={<Login setUser={setUser} user={user}/>} />

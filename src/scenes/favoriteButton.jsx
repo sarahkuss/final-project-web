@@ -1,13 +1,18 @@
-import { useState } from "react"
-import { Button } from "react-bootstrap"
+import { useState, useEffect } from "react"
+import { Button, Container, Row, Col } from "react-bootstrap"
 import { SuitHeart, SuitHeartFill } from "react-bootstrap-icons"
 import { useNavigate } from "react-router-dom"
 
 
-export default function FavoriteButton ({user, orgId}) {
-  // const [liked, setLiked] = useState(false)
+export default function FavoriteButton ({setUser,user, orgId}) {
   const navigate = useNavigate()
-  const liked = (user && user.favorites && user.favorites.includes(orgId))
+  const [liked, setLiked] = useState(false)
+
+  useEffect(() => {
+    if(user && user.favorites) {
+      setLiked(user.favorites.includes(orgId))
+    }
+  }, [user, orgId])
   
   
   const handleLike = () => {
@@ -28,18 +33,26 @@ export default function FavoriteButton ({user, orgId}) {
         alert(data.message)
         return
       }
-      // setLiked(true)
+      
+      setUser(data)
+      
     })
     .catch(alert)
   }}
 
   return (
   <>
+  <Container>
+    <Row>
+      <Col>
   {!liked ? (
-    <Button className="mt-2" onClick={handleLike}><SuitHeart /></Button>
-  ) : (
-    <Button className="mt-2" onClick={handleLike}><SuitHeartFill /></Button>
-  )}
+    <Button className="" onClick={handleLike}><SuitHeart /></Button>
+    ) : (
+      <Button className="" onClick={handleLike}><SuitHeartFill /></Button>
+      )}
+      </Col>
+    </Row>
+  </Container>
   </>
 )
 }

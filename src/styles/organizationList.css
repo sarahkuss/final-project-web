@@ -1,4 +1,7 @@
-/* #organization .backdrop-filter {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+
+/* .modal-content {
   backdrop-filter: blur(2px);
   backdrop-filter: brightness(60%);
   backdrop-filter: contrast(40%);
@@ -11,24 +14,44 @@
   backdrop-filter: saturate(80%);
 } */
 
-/* body {
-  background-image: url(/public/images/CLbg-removebg-preview.png);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-} */
 
 #organization {
-  background-color: #f9e8d041;
-  background-image: url(/public/images/CLbg-removebg-preview.png);
-  background-position: bottom;
+  /* background-color: #f9e8d041; */
+  background-image: url(/public/images/rainforestBG.jpeg);
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+  /* height: 100%; */
 }
 
 
 #organization img {
   aspect-ratio: 1 / 1;
   object-fit: contain;
-  
+
 }
+
+.modal {
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 0;
+  backdrop-filter: blur(2px);
+}
+
+
+.modal img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.trash-button {
+  color: black;
+  background-color: transparent;
+  border-color: transparent;
+}
+

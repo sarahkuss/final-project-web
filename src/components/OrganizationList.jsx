@@ -5,7 +5,7 @@ import FavoriteButton from "../scenes/favoriteButton";
 
 import '../styles/organizationList.css'
 
-export default function OrganizationList({ organizations, setOrganizations, user }) {
+export default function OrganizationList({ organizations, setOrganizations, user, setUser }) {
   const [thisOrg, setThisOrg] = useState()
   const [openModal, setOpenModal] = useState(false)
 
@@ -31,17 +31,25 @@ export default function OrganizationList({ organizations, setOrganizations, user
         <Container id="organization" fluid>
         <Row>
         {organizations.map((element) => (
-            <Col sm={12} md={4} lg={2} key={element._id} className="">
-              <Card className="m-2 p-2">
+            <Col sm={12} md={4} lg={3} key={element._id} className="">
+              <Card className="org-card m-2 p-2">
                 <Image variant= "top" src={element.logo} fluid />
-                <Button className="bg-success mb-1" onClick={() => handleOpen(element)}>More Info</Button>
-                <DeleteOrganization setOrganizations={setOrganizations} user={user} orgId={element._id}/>
-                <FavoriteButton user={user} orgId={element._id} />
+                <Button className="bg-success mb-2 mt-2" onClick={() => handleOpen(element)}>More Info</Button>
+                <Container className="button-container">
+                <Row className="button-row">
+                  <Col>
+                    <DeleteOrganization setOrganizations={setOrganizations} user={user} orgId={element._id}/>
+                  </Col>
+                  <Col>
+                    <FavoriteButton user={user} orgId={element._id} setUser={setUser} />
+                  </Col>
+                </Row>
+                </Container>
               </Card>
             </Col>
           ))}
         </Row>
-                <Modal show={openModal} onHide={handleClose} className="backdrop-filter">
+                <Modal show={openModal} onHide={handleClose} className="modal">
                   
                     <Image src={thisOrg?.speciesImage} fluid/>
                     <div className="p-3">
@@ -49,7 +57,7 @@ export default function OrganizationList({ organizations, setOrganizations, user
                       <p><strong>Mission Statement:</strong> {thisOrg?.missionStatement}</p>                  
                       <p><a href={thisOrg?.website} target="_blank" rel="noreferrer">Website</a></p>
                       {/* <Button onClick={handleClose}>Close</Button> */}
-                      {/* <DeleteOrganization setOrganizations={setOrganizations} orgId={thisOrg._id} /> */}
+                      {/* <DeleteOrganization setOrganizations={setOrganizations} orgId={thisOrg._id} user={user} /> */}
                     </div>
                   
                 </Modal>
