@@ -2,13 +2,14 @@
 
 .add-container {
   background-color: rgba(219, 150, 82, 0.913);
+  margin-top: 25%;
 }
-
+/* 
 
 .add-button-col {
   display: flex;
   justify-content: right;
-  /* margin: 8px 0px;  */
+  margin: 8px 0px;
   font-family: 'Montserrat', sans-serif;
 }
 .add-button-col h2{
@@ -16,13 +17,13 @@
   margin: 0px;
   font-family: 'Montserrat', sans-serif;
 }
-
+*/
 
 .organizations-text {
-  display: flex;
-  justify-content: left;
+  /* display: flex;
+  justify-content: left; */
   font-size: 30px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
 }
-
+ 

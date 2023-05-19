@@ -43,9 +43,9 @@ export default function AddOrganization ({setOrganizations, user}) {
   return(
     <>
     <Container fluid className="add-container">
-      <Row>
-        <Col className="organizations-text">Organizations:</Col>
-        <Col className="add-button-col">
+      <Row className="p-3">
+        <Col xs={11} md={6} className="organizations-text text-center text-md-start">Organizations<span className="d-none d-md-inline">:</span></Col>
+        <Col xs={11} md={6}  className="add-button-col  text-center  text-md-end">
           {!user ? (
             // <Button onClick={navigate('/login')}>Add Organization</Button>
             <>

@@ -1,14 +1,25 @@
-.hero-container {
-  /* background-image: url('/public/images/CLbg-removebg-preview.png');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+
+/* .hero-container {
+  background-image: url('/public/images/CLnobg.png');
   background-position: bottom;
-  background-repeat: no-repeat; */
-  /* background-attachment: fixed; */
-  height: 60vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 58vh;
   text-align: center;
-  background-color: rgba(251, 244, 235, 0.788);
-}
+  background-color: rgb(251, 244, 235);
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+} */
+
 
 /* .hero-container col {
   display: flex;
   justify-content: center;
 } */
+
+/* .hero-container img {
+  max-height: 600px;
+} */
+
