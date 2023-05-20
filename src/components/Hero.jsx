@@ -17,10 +17,10 @@ export default function Hero () {
                 </video>
             </div>
           
-        
           <div className="video-content">
             <h1 className="mb-0 pb-0">Connecting you with Conservation</h1>
           </div>
+        
         </Col>
       </Row>
     </Container>
