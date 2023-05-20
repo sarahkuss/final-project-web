@@ -10,6 +10,7 @@ import ConservationNavbar from './components/ConservationNavbar';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   const [organizations, setOrganizations] = useState('')
@@ -35,6 +36,7 @@ function App() {
         <Route path='/login' element={<Login setUser={setUser} user={user}/>} />
         <Route path='/signup' element={<Signup setUser={setUser} />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
     </>
   );
