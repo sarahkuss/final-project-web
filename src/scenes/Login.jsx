@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import '../styles/login.css'
 
@@ -57,9 +57,9 @@ export default function Login ({user, setUser}) {
                 value={password}
                 onChange={e => setPassword(e.target.value)}/>
             </Form.Group>
-            <Button onClick={handleLogin} className="mt-2">Submit</Button>
+            <Button onClick={handleLogin} className="login-button">Submit</Button>
           </Form>
-      
+          <br /><p>Not a member? <Link to={'/signup'}>Signup!</Link></p>
         </Col>
       </Row>
     </Container>
