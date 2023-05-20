@@ -11,12 +11,12 @@
   font-size: 25px;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
-  
 }
 
 .navbar-collapse {
-  justify-content: flex-end;
+  justify-content: space-between;
 }
+
 
 .sticky-top {
   padding: 0 !important; 

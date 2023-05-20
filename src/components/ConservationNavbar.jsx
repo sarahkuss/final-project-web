@@ -14,7 +14,7 @@ export default function ConservationNavbar ({user, setUser}) {
         <Navbar.Brand as={Link} to="/"><img className="logo-image" src="../../images/logo2.png" alt="" /></Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <Nav className="justify-content-between">
+          <Nav className="learn-involved">
             <Nav.Link as={Link} to='/learn'>Learn</Nav.Link>
             <Nav.Link as={Link} to='/getinvolved'>Get Involved</Nav.Link>
           </Nav>
