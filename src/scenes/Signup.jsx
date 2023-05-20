@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Container, Row, Form } from "react-bootstrap";
+import { Button, Container, Row, Form, Col } from "react-bootstrap";
+
+import '../styles/signup.css'
 
 
 export default function Signup ({setUser}) {
@@ -33,8 +35,10 @@ export default function Signup ({setUser}) {
 
   return (
     <>
-    <Container>
-      <Row className="justify-content-center m-2" lg={2}>
+    <Container className="signup-container" fluid>
+      <Row className="justify-content-center" lg={2}>
+        <Col id="signup-col">
+          <h2>Signup</h2>
         <Form onSubmit={handleSignup}>
           <Form.Group>
             <Form.Label>First Name</Form.Label>
@@ -68,8 +72,9 @@ export default function Signup ({setUser}) {
               value={password}
               onChange={e => setPassword(e.target.value)}/>
           </Form.Group>
-          <Button onClick={handleSignup} className="mt-2">Sign Up</Button>
+          <Button onClick={handleSignup} className="signup-button">Sign Up</Button>
         </Form>
+        </Col>
       </Row>
     </Container>
     </>

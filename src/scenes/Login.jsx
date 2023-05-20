@@ -38,7 +38,7 @@ export default function Login ({user, setUser}) {
     <>
     <Container className="login-container" fluid>
       <Row lg={2} md={2} className="form-row ">
-        <Col className="form-col">
+        <Col id="login-col">
           <h2>Login</h2>
           <Form onSubmit={handleLogin}>
             <Form.Group>
