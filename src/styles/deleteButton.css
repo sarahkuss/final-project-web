@@ -1,11 +1,13 @@
-.trash-button {
+/* .trash-button {
   color: black;
   background-color: transparent;
   border-color: transparent;
-}
+} */
 
 #trash-button .btn {
   color: black;
   background-color: transparent;
   border-color: green;
+  font-size: 25px;
+  
 }

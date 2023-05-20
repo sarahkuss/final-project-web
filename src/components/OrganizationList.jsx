@@ -31,7 +31,7 @@ export default function OrganizationList({ organizations, setOrganizations, user
         <Container id="organization" fluid>
         <Row>
         {organizations.map((element) => (
-            <Col sm={12} md={4} lg={3} key={element._id} className="">
+            <Col sm={11} md={4} lg={3} key={element._id} className="org-col">
               <Card className="org-card m-2 p-2">
                 <Image variant= "top" src={element.logo} fluid />
                 <Button className="bg-success mb-2 mt-2" onClick={() => handleOpen(element)}>More Info</Button>
