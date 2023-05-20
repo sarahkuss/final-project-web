@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { Button, Container, Row, Col } from "react-bootstrap"
 import { SuitHeart, SuitHeartFill } from "react-bootstrap-icons"
 import { useNavigate } from "react-router-dom"
+import '../styles/favButton.css'
 
 
 export default function FavoriteButton ({setUser,user, orgId}) {
@@ -46,9 +47,9 @@ export default function FavoriteButton ({setUser,user, orgId}) {
     <Row>
       <Col>
   {!liked ? (
-    <Button className="" onClick={handleLike}><SuitHeart /></Button>
+    <Button className="unliked-button" onClick={handleLike}><SuitHeart /></Button>
     ) : (
-      <Button className="" onClick={handleLike}><SuitHeartFill /></Button>
+      <Button className="liked-button" onClick={handleLike}><SuitHeartFill /></Button>
       )}
       </Col>
     </Row>

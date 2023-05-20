@@ -1,0 +1,15 @@
+.liked-button {
+  background-color: transparent !important;
+  color: red !important;
+  width: 80px;
+  font-size: 25px !important;
+  border-color: rgb(246, 136, 2) !important;
+}
+
+.unliked-button {
+  background-color: transparent !important;
+  color: red !important;
+  font-size: 25px !important;
+  width: 80px;
+  border-color: rgb(246, 136, 2) !important ;
+}
