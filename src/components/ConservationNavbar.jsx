@@ -11,7 +11,7 @@ export default function ConservationNavbar ({user, setUser}) {
   return(
     <Navbar className="sticky-top" expand='lg'>
       <Container className="navbar-container" fluid>
-        <Navbar.Brand as={Link} to="/"><img className="logo-image" src="../../images/logo2.png" alt="" /></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><img className="logo-image" src="../../images/logowords.png" alt="" /></Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="learn-involved">

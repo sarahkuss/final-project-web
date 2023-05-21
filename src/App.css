@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 110vh;
+  height: 95vh;
   overflow: hidden;
   z-index: -1;
   /* border: 5px solid red; */
@@ -33,11 +33,11 @@
 .video-content {
   background-color: rgba(250, 247, 251, 0.356);
   /* margin-top: 20%; */
-  /* margin-top: 100px; */
-  margin-right: 0px;
-  /* margin-left: 150px; */
+  margin-top: 40px;
+  /* margin-right: 0px; */
+  margin-left: 90px;
   /* width: 300px; */
-  padding: 30px;
+  padding: 15px;
   border-radius: 6px;
   font-family: 'Bebas Neue', sans-serif;
   transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
