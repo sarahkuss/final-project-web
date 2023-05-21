@@ -1,15 +1,17 @@
-.liked-button {
-  background-color: transparent !important;
-  color: red !important;
-  width: 80px;
-  font-size: 25px !important;
-  border-color: rgb(246, 136, 2) !important;
+.favbutton-col .liked-button {
+  background-color: #f3ebd299;
+  color: red;
+  width: 100px;
+  font-size: 25px;
+  border-color: rgb(246, 136, 2);
 }
 
-.unliked-button {
-  background-color: transparent !important;
-  color: red !important;
-  font-size: 25px !important;
-  width: 80px;
-  border-color: rgb(246, 136, 2) !important ;
+.favbutton-col .unliked-button {
+  background-color: #f3ebd299;
+  color: red;
+  font-size: 25px;
+  width: 100px;
+  border-color: rgb(246, 136, 2) ;
+  
 }
+

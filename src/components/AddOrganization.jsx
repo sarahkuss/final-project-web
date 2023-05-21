@@ -8,6 +8,7 @@ export default function AddOrganization ({setOrganizations, user}) {
   const [missionStatement, setMissionStatement] = useState("")
   const [logo, setLogo] = useState("")
   const [website, setWebsite] = useState("")
+  const [speciesImage, setSpeciesImage] = useState("")
   const [openModal, setOpenModal] = useState(false)
 
   const handleOpen = () => setOpenModal(true)
@@ -22,7 +23,7 @@ export default function AddOrganization ({setOrganizations, user}) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({orgName, missionStatement, logo, website})
+      body: JSON.stringify({orgName, missionStatement, logo, website, speciesImage})
     })
     .then(resp => resp.json())
     .then(data => {
@@ -35,6 +36,7 @@ export default function AddOrganization ({setOrganizations, user}) {
       setOrgName("")
       setLogo("")
       setWebsite("")
+      setSpeciesImage("")
       handleClose()
     })
     .catch(alert)
@@ -47,14 +49,18 @@ export default function AddOrganization ({setOrganizations, user}) {
         <Col xs={11} md={6} className="organizations-text text-center text-md-start">Organizations<span className="d-none d-md-inline">:</span></Col>
         <Col xs={11} md={6}  className="add-button-col  text-center  text-md-end">
           {!user ? (
-            // <Button onClick={navigate('/login')}>Add Organization</Button>
+            
             <>
-            <h2><Link to={'/login'}>Login</Link> to add an organization!</h2>
+            {/* <h2><Link to={'/login'}>Add Organization</Link></h2> */}
+            <Button className="notuser-button p-2" size="lg"><Link to={'/login'}>Add Organization</Link></Button>
+    
+            
+            
             </>
           ) : (
             <>
-            <Button className="p-2" size="lg" onClick={handleOpen}>Add Organization</Button>
-          <Modal show={openModal} onHide={handleClose}>
+            <Button className="user-button p-2" size="lg" onClick={handleOpen}>Add Organization</Button>
+          <Modal className="add-modal" show={openModal} onHide={handleClose}>
             <Form onSubmit={handleSubmit}>
               <Form.Group>
                 <Form.Label>Organization Name</Form.Label>
@@ -91,6 +97,15 @@ export default function AddOrganization ({setOrganizations, user}) {
                   required={true}
                   placeholder="Enter link to website"
                   onChange={e => setWebsite(e.target.value)}/>
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Animal Image</Form.Label>
+                <Form.Control 
+                  type="text"
+                  value={speciesImage}
+                  required={true}
+                  placeholder="Enter image link to animal"
+                  onChange={e => setSpeciesImage(e.target.value)} />
               </Form.Group>
               <Button onSubmit={handleClose} type="submit">Save</Button>
             </Form>

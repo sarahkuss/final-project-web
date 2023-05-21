@@ -16,8 +16,69 @@
   font-size: 23px;
   margin: 0px;
   font-family: 'Montserrat', sans-serif;
+} */
+
+.add-modal .modal-content{
+  padding: 15px;
+  background-color: #f3ebd2c7;
+  font-weight: 600;
 }
-*/
+
+.modal-content button{
+  margin-top: 10px;
+  --color: #00A97F;
+  padding: 0.8em 1.7em;
+  background-color: white;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+
+.modal-content button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .modal-content button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .modal-content button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .modal-content button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .modal-content button:hover {
+  color: rgb(10, 25, 30) !important;
+ }
+ 
+ .modal-content button:active {
+  filter: brightness(.8);
+ }
+
 
 .organizations-text {
   /* display: flex;
@@ -27,3 +88,21 @@
   font-family: 'Montserrat', sans-serif;
 }
  
+.notuser-button a{
+  color: black;
+  text-decoration: none;
+  background-color: #f3ebd299;
+  border-color: rgb(246, 136, 2);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.add-button-col button{
+  background-color: #f3ebd299;
+  border-color: rgb(246, 136, 2);
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  --bs-btn-hover-color: orange;
+  --bs-btn-hover-bg: #d5f3d299 ;
+  --bs-btn-hover-border-color: rgb(246, 136, 2);
+}

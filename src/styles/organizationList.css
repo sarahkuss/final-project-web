@@ -54,6 +54,24 @@
   
 }
 
+.modal-content a{
+  color:black
+}
+
+.org-card button {
+  --bs-btn-hover-color: orange;
+  --bs-btn-hover-bg: #d5f3d299 ;
+  --bs-btn-hover-border-color: rgb(246, 136, 2);
+}
+
+.org-card .moreinfo-button {
+  background-color: #f3ebd299;
+  border-color: rgb(246, 136, 2);
+  color: rgb(60, 57, 57);
+  font-size: 20px;
+  padding: 10px;
+}
+
 /* .trash-button {
   color: black;
   background-color: transparent;

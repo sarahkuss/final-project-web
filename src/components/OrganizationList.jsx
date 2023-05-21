@@ -34,7 +34,7 @@ export default function OrganizationList({ organizations, setOrganizations, user
             <Col sm={11} md={4} lg={3} key={element._id} className="org-col">
               <Card className="org-card m-2 p-2">
                 <Image variant= "top" src={element.logo} fluid />
-                <Button className="bg-success mb-2 mt-2" onClick={() => handleOpen(element)}>More Info</Button>
+                <Button className="moreinfo-button mb-2 mt-2" onClick={() => handleOpen(element)}><strong>More Info</strong></Button>
                 <Container className="button-container">
                 <Row className="button-row">
                   <Col>
@@ -55,7 +55,7 @@ export default function OrganizationList({ organizations, setOrganizations, user
                     <div className="p-3">
                       <h3 className="text-center">{thisOrg?.orgName}</h3>                                      
                       <p><strong>Mission Statement:</strong> {thisOrg?.missionStatement}</p>                  
-                      <p><a href={thisOrg?.website} target="_blank" rel="noreferrer">Website</a></p>
+                      <p className="text-center"><a href={thisOrg?.website} target="_blank" rel="noreferrer">Website</a></p>
                       {/* <Button onClick={handleClose}>Close</Button> */}
                       {/* <DeleteOrganization setOrganizations={setOrganizations} orgId={thisOrg._id} user={user} /> */}
                     </div>

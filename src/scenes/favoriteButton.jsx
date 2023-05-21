@@ -45,7 +45,7 @@ export default function FavoriteButton ({setUser,user, orgId}) {
   <>
   <Container>
     <Row>
-      <Col>
+      <Col className="favbutton-col">
   {!liked ? (
     <Button className="unliked-button" onClick={handleLike}><SuitHeart /></Button>
     ) : (
