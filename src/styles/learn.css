@@ -2,9 +2,9 @@
 
 
 .learn-container h1 {
-  margin: 0;
+  margin-bottom: 20px;
   padding: 10px;
-  background-color: rgba(219, 150, 82, 0.868);
+  background-color: rgba(247, 224, 191, 0.868);
   font-weight: 700;
 }
 
@@ -18,7 +18,7 @@ font-weight: 700;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-size: 18px;
+  font-size:clamp(15px, 4vw, 18px);
   font-family: 'Montserrat', sans-serif;
   color:black;
   /* font-weight: 300; */
@@ -35,6 +35,8 @@ font-weight: 700;
   font-weight: 600;
   text-align: center;
   margin: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .whatis-col {
@@ -42,6 +44,8 @@ font-weight: 700;
   font-weight: 600;
   padding: 20px;
   margin: 60px;
+  margin-bottom: 50px;
+  border-radius: 10px;
 }
 
 .why-col {
@@ -49,6 +53,7 @@ font-weight: 700;
   font-weight: 600;
   margin: 20px;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .how-col {
@@ -56,5 +61,6 @@ font-weight: 700;
   font-weight: 600;
   margin: 60px;
   padding: 20px;
+  border-radius: 10px;
 }
 

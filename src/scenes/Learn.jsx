@@ -5,7 +5,7 @@ export default function Learn () {
   return (
     <>
     <Container className='learn-container' fluid>
-      <section className='content-section' fluid>
+      <section className='content-section'>
       <Row className='learn-row'>
       <h1 className='text-center'>Learn More</h1>
         <Col className='aboutCC-col'>
