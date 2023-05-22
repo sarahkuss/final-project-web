@@ -27,7 +27,7 @@
 }
 
 .GI-section {
-  margin: 40px;
+  margin: 25px;
   margin-top:0;
   margin-bottom: 0;
   padding: 10px;
@@ -35,37 +35,39 @@
 }
 
 .GI-row {
-  margin: 20px;
+  margin: 10px;
   margin-bottom: 0;
-  padding: 20px;
+  padding: 10px;
+  padding-top: 15px;
   background-color: rgba(250, 176, 102, 0.738);
 }
 
 .help-row {
   background-color: rgba(251, 244, 235, 0.769);
-  margin: 20px;
+  margin: 10px;
   margin-bottom: 0px;
-  padding: 20px;
+  padding: 10px;
+  padding-top: 15px;
   
 }
 
 .ways-col {
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
 }
 
 .ways2-col {
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
 }
 
 .home-col{
-  margin: 10px;
+  margin: 5px;
   padding: 10px;  
 }
 
 .home2-col {
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
 }
 

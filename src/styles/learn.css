@@ -28,7 +28,7 @@ font-weight: 700;
 
 .content-section {
   /* background-color: rgba(251, 244, 235, 0.643); */
-  margin: 40px;
+  margin: 25px;
   margin-top:0;
   margin-bottom: 0;
   padding: 10px;
@@ -37,37 +37,28 @@ font-weight: 700;
 
 .learn-row {
   background-color: rgba(250, 169, 88, 0.738);
-  padding: 20px;
+  padding: 5px;
+  padding-top: 10px;
 }
 
 .what-row {
   background-color: rgb(169, 183, 167);
-  padding: 20px;
+  padding: 5px;
+  padding-top: 10px;
 }
 
 .why-row {
   background-color: rgba(251, 244, 235, 0.696);
-}
-
-.aboutCC-col {
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
-
-.whatis-col {
-  margin-bottom: 10px;
-  border-radius: 10px;
+  padding-top: 5px;
 }
 
 .why-col {
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
 }
 
 .how-col {
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
 }
 
