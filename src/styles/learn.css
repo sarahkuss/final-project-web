@@ -1,3 +1,60 @@
-/* body {
-  background-color: azure;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+
+.learn-container h1 {
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(219, 150, 82, 0.868);
+  font-weight: 700;
+}
+
+.learn-container h2 {
+/* text-align: center; */
+font-weight: 700;
+}
+
+.learn-container {
+  background-image: url(/public/images/savannahbg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  color:black;
+  /* font-weight: 300; */
+}
+
+/* .content-section {
+  background-color: rgba(251, 244, 235, 0.643);
+  margin: 0;
+  padding: 0;
 } */
+
+.aboutCC-col {
+  background-color: rgba(251, 244, 235, 0.696);
+  font-weight: 600;
+  text-align: center;
+  margin: 20px;
+}
+
+.whatis-col {
+  background-color: rgba(251, 244, 235, 0.769);
+  font-weight: 600;
+  padding: 20px;
+  margin: 60px;
+}
+
+.why-col {
+  background-color: rgba(251, 244, 235, 0.77);
+  font-weight: 600;
+  margin: 20px;
+  padding: 20px;
+}
+
+.how-col {
+  background-color: rgba(251, 244, 235, 0.765);
+  font-weight: 600;
+  margin: 60px;
+  padding: 20px;
+}
+

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+
+.footer-container {
+  background-color: rgb(131, 171, 123);
+  padding: 0 !important;
+  /* text-align: center; */
+  
+}
+
+.footer-container p {
+  margin-bottom: 0;
+  font-size: 22px;
+  color: rgb(42, 41, 41);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container a {
+  font-size: 28px;
+  color: rgb(42, 41, 41);
+}

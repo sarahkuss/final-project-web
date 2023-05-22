@@ -52,14 +52,14 @@ export default function AddOrganization ({setOrganizations, user}) {
             
             <>
             {/* <h2><Link to={'/login'}>Add Organization</Link></h2> */}
-            <Button className="notuser-button p-2" size="lg"><Link to={'/login'}>Add Organization</Link></Button>
+            <Button className="notuser-button" size="lg"><Link to={'/login'}>Add Organization</Link></Button>
     
             
             
             </>
           ) : (
             <>
-            <Button className="user-button p-2" size="lg" onClick={handleOpen}>Add Organization</Button>
+            <Button className="user-button" size="lg" onClick={handleOpen}>Add Organization</Button>
           <Modal className="add-modal" show={openModal} onHide={handleClose}>
             <Form onSubmit={handleSubmit}>
               <Form.Group>
