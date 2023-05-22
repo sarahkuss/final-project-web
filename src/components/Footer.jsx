@@ -13,7 +13,7 @@ export default function Footer () {
       <Row>
         <Col className="text-center">
           <p>
-          <strong>&copy;{currentYear}</strong> &nbsp;
+          <strong>&copy;{currentYear} Sarah Kuss</strong> &nbsp;
           <a href={githubUrl} target="_blank" rel="noreferrer"><Github /></a>&nbsp; &nbsp;
           <a href={linkedInUrl} target="_blank" rel="noreferrer"><Linkedin /></a>
           </p>
