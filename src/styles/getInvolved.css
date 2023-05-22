@@ -3,20 +3,22 @@
 
 
 .getinvolved-container {
-  background-image: url(/public/images/penguins.jpg);
+  /* background-image: url(/public/images/penguins.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-color: rgb(131, 171, 123);
   font-size:clamp(15px, 4vw, 18px);
   color: black;
   font-family: 'Montserrat', sans-serif;
 }
 
-.getinvolved-container h1{
-  margin-bottom: 20px;
+.GI {
+  margin-bottom: 0px;
   padding: 10px;
   background-color: rgba(247, 224, 191, 0.868);
   font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .getinvolved-container h3 {
@@ -24,21 +26,50 @@
   padding-bottom: 20px;
 }
 
+.GI-section {
+  margin: 40px;
+  margin-top:0;
+  margin-bottom: 0;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.GI-row {
+  margin: 20px;
+  margin-bottom: 0;
+  padding: 20px;
+  background-color: rgba(250, 176, 102, 0.738);
+}
+
+.help-row {
+  background-color: rgba(251, 244, 235, 0.769);
+  margin: 20px;
+  margin-bottom: 0px;
+  padding: 20px;
+  
+}
 
 .ways-col {
-  background-color: rgba(251, 244, 235, 0.769);
-  font-weight: 600;
-  padding: 35px;
-  margin: 40px;
-  margin-bottom: 60px;
-  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.ways2-col {
+  margin: 10px;
+  padding: 10px;
 }
 
 .home-col{
-  background-color: rgba(251, 244, 235, 0.769);
-  font-weight: 600;
-  padding: 35px;
-  margin: 20px;
-  margin-bottom: 50px;
-  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;  
+}
+
+.home2-col {
+  margin: 10px;
+  padding: 10px;
+}
+
+.line-row {
+  background-color: rgb(169, 183, 167);
+  height: 30px;
 }

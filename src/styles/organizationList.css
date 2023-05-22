@@ -72,11 +72,12 @@
   padding: 10px;
 }
 
-/* .trash-button {
-  color: black;
-  background-color: transparent;
-  border-color: transparent;
-} */
+
+/* controlling delete and fav button */
+.org-col .col {
+  padding: 2px;
+}
+
 
 /* .org-card{
   background-color: rgb(27, 208, 99) !important;

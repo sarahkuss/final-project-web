@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+
 .login-container {
   background-image: url(/public/images/CLbg2.png);
   background-position: center;
@@ -5,6 +8,7 @@
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .form-row {

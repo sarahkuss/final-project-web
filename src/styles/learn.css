@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
 
 
-.learn-container h1 {
-  margin-bottom: 20px;
+.learn-more {
+  margin-bottom: 0px; 
   padding: 10px;
-  background-color: rgba(247, 224, 191, 0.868);
+  background-color: rgba(247, 224, 191, 0.748);
   font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .learn-container h2 {
@@ -14,52 +15,58 @@ font-weight: 700;
 }
 
 .learn-container {
-  background-image: url(/public/images/savannahbg.jpg);
+  /* background-image: url(/public/images/savannahbg.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-color: rgb(131, 171, 123);
   font-size:clamp(15px, 4vw, 18px);
   font-family: 'Montserrat', sans-serif;
   color:black;
   /* font-weight: 300; */
 }
 
-/* .content-section {
-  background-color: rgba(251, 244, 235, 0.643);
-  margin: 0;
-  padding: 0;
-} */
+.content-section {
+  /* background-color: rgba(251, 244, 235, 0.643); */
+  margin: 40px;
+  margin-top:0;
+  margin-bottom: 0;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.learn-row {
+  background-color: rgba(250, 169, 88, 0.738);
+  padding: 20px;
+}
+
+.what-row {
+  background-color: rgb(169, 183, 167);
+  padding: 20px;
+}
+
+.why-row {
+  background-color: rgba(251, 244, 235, 0.696);
+}
 
 .aboutCC-col {
-  background-color: rgba(251, 244, 235, 0.696);
-  font-weight: 600;
-  text-align: center;
-  margin: 20px;
   margin-bottom: 10px;
   border-radius: 10px;
 }
 
 .whatis-col {
-  background-color: rgba(251, 244, 235, 0.769);
-  font-weight: 600;
-  padding: 20px;
-  margin: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   border-radius: 10px;
 }
 
 .why-col {
-  background-color: rgba(251, 244, 235, 0.77);
-  font-weight: 600;
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
 }
 
 .how-col {
-  background-color: rgba(251, 244, 235, 0.765);
-  font-weight: 600;
-  margin: 60px;
+  margin: 20px;
   padding: 20px;
   border-radius: 10px;
 }
