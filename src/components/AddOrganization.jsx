@@ -4,11 +4,11 @@ import { Link, useNavigate } from "react-router-dom"
 import '../styles/addOrg.css'
 
 export default function AddOrganization ({setOrganizations, user}) {
-  const [orgName, setOrgName] = useState("")
-  const [missionStatement, setMissionStatement] = useState("")
-  const [logo, setLogo] = useState("")
-  const [website, setWebsite] = useState("")
-  const [speciesImage, setSpeciesImage] = useState("")
+  const [orgName, setOrgName] = useState("North American Wood Ape Conservancy")
+  const [missionStatement, setMissionStatement] = useState("To investigate and conduct research regarding the existence of the unlisted primate species we refer to as the wood ape, also known as the sasquatch or bigfoot; to facilitate scientific, official and governmental recognition, conservation, and protection of the species and its habitat; and to help further factual education and understanding to the public regarding the species, with a focus on the continent of North America. ")
+  const [logo, setLogo] = useState("https://www.woodape.org/wp-content/uploads/2020/07/NAWAC_logo_white_envelope-1.png")
+  const [website, setWebsite] = useState("https://www.woodape.org/")
+  const [speciesImage, setSpeciesImage] = useState("https://images.radio.com/aiu-media/GettyImages152533219-33d17dcd-45f8-4ebf-abd2-d9da18163375.jpg")
   const [openModal, setOpenModal] = useState(false)
 
   const handleOpen = () => setOpenModal(true)
