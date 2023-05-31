@@ -16,11 +16,17 @@ export default function DeleteOrganization ({setOrganizations, orgId, user}) {
       fetch(`https://final-project-conservation.web.app/organizations/${orgId}`, {
         method: "DELETE",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "check": localStorage.getItem("check")
         }
       })
       .then(res => res.json())
-      .then(setOrganizations)
+      .then(data => {
+        if(data.message) {
+          alert(data.message)
+          return
+        }
+        setOrganizations(data)})
       .catch(alert)
     }
     }

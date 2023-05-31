@@ -22,6 +22,7 @@ export default function AddOrganization ({setOrganizations, user}) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "check": localStorage.getItem("check")
       },
       body: JSON.stringify({orgName, missionStatement, logo, website, speciesImage})
     })
