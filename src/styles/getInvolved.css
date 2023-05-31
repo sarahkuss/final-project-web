@@ -39,7 +39,8 @@
   margin-bottom: 0;
   padding: 10px;
   padding-top: 15px;
-  background-color: rgba(250, 176, 102, 0.738);
+  background-color: rgb(169, 183, 167);
+  /* background-color: rgba(250, 176, 102, 0.738); */
 }
 
 .help-row {
@@ -72,6 +73,6 @@
 }
 
 .line-row {
-  background-color: rgb(169, 183, 167);
+  background-color: rgba(250, 176, 102, 0.738);
   height: 30px;
 }
