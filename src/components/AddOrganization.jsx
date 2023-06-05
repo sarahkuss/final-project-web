@@ -15,6 +15,8 @@ export default function AddOrganization ({setOrganizations, user}) {
   const handleClose = () => setOpenModal(false)
   
   const navigate = useNavigate()
+
+  // const token = localStorage.getItem("token")
   
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -23,6 +25,7 @@ export default function AddOrganization ({setOrganizations, user}) {
       headers: {
         "Content-Type": "application/json",
         "check": localStorage.getItem("check")
+        // "Authorization": token,
       },
       body: JSON.stringify({orgName, missionStatement, logo, website, speciesImage})
     })

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 export default function DeleteOrganization ({setOrganizations, orgId, user}) {
   const navigate = useNavigate()
+  // const token = localStorage.getItem("token")
   
   const handleDelete = (e) => {
     if(!user) {
@@ -18,6 +19,7 @@ export default function DeleteOrganization ({setOrganizations, orgId, user}) {
         headers: {
           "Content-Type": "application/json",
           "check": localStorage.getItem("check")
+          // "Authorization": token
         }
       })
       .then(res => res.json())
