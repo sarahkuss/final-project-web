@@ -51,11 +51,17 @@ export default function AddOrganization ({setOrganizations, user}) {
     <Container fluid className="add-container">
       <Row className="p-3">
         <Col xs={11} md={6} className="organizations-text text-center text-md-start">Organizations<span className="d-none d-md-inline">:</span></Col>
-        <Col xs={11} md={6}  className="add-button-col  text-center  text-md-end">
+        <Col xs={11} md={6} className="text-center text-md-end" >
+        <p className="suggest-text">Don't see your favorite organization? Suggest it <button className="here-button" onClick={handleOpen}>here</button>.</p>
+        <Modal className="form-modal" show={openModal} onHide={handleClose}>
+        <iframe className="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSflfzkPRkOfPw_PfL_eHKYV8Eq7J2gdu3TkyrDJSf8R7_CCQA/viewform?embedded=true" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </Modal>
+        </Col>
+        {/* <Col xs={11} md={6}  className="add-button-col  text-center  text-md-end">
           {!user ? (
             
             <>
-            {/* <h2><Link to={'/login'}>Add Organization</Link></h2> */}
+            
             <Button className="notuser-button" size="lg"><Link to={'/login'}>Add Organization</Link></Button>
     
             
@@ -117,7 +123,7 @@ export default function AddOrganization ({setOrganizations, user}) {
           </Modal>
             </>
             )}
-        </Col>
+        </Col> */}
       </Row>
     </Container>
 
