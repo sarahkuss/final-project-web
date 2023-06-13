@@ -4,11 +4,11 @@ import { Link, useNavigate } from "react-router-dom"
 import '../styles/addOrg.css'
 
 export default function AddOrganization ({setOrganizations, user}) {
-  const [orgName, setOrgName] = useState("")
-  const [missionStatement, setMissionStatement] = useState("")
-  const [logo, setLogo] = useState("")
-  const [website, setWebsite] = useState("")
-  const [speciesImage, setSpeciesImage] = useState("")
+  // const [orgName, setOrgName] = useState("")
+  // const [missionStatement, setMissionStatement] = useState("")
+  // const [logo, setLogo] = useState("")
+  // const [website, setWebsite] = useState("")
+  // const [speciesImage, setSpeciesImage] = useState("")
   const [openModal, setOpenModal] = useState(false)
 
   const handleOpen = () => setOpenModal(true)
@@ -18,33 +18,33 @@ export default function AddOrganization ({setOrganizations, user}) {
 
   // const token = localStorage.getItem("token")
   
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    fetch("https://final-project-conservation.web.app/organizations", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "check": localStorage.getItem("check")
-        // "Authorization": token,
-      },
-      body: JSON.stringify({orgName, missionStatement, logo, website, speciesImage})
-    })
-    .then(resp => resp.json())
-    .then(data => {
-      if(data.message) {
-        alert(data.message)
-        return
-      }
-      setOrganizations(data)
-      setMissionStatement("")
-      setOrgName("")
-      setLogo("")
-      setWebsite("")
-      setSpeciesImage("")
-      handleClose()
-    })
-    .catch(alert)
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   fetch("https://final-project-conservation.web.app/organizations", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "check": localStorage.getItem("check")
+  //       // "Authorization": token,
+  //     },
+  //     body: JSON.stringify({orgName, missionStatement, logo, website, speciesImage})
+  //   })
+  //   .then(resp => resp.json())
+  //   .then(data => {
+  //     if(data.message) {
+  //       alert(data.message)
+  //       return
+  //     }
+  //     setOrganizations(data)
+  //     setMissionStatement("")
+  //     setOrgName("")
+  //     setLogo("")
+  //     setWebsite("")
+  //     setSpeciesImage("")
+  //     handleClose()
+  //   })
+  //   .catch(alert)
+  // }
   
   return(
     <>
