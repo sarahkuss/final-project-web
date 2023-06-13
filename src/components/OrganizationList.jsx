@@ -37,9 +37,9 @@ export default function OrganizationList({ organizations, setOrganizations, user
                 <Button className="moreinfo-button mb-2 mt-2" onClick={() => handleOpen(element)}><strong>More Info</strong></Button>
                 <Container className="button-container">
                 <Row className="button-row">
-                  <Col>
+                  {/* <Col>
                     <DeleteOrganization setOrganizations={setOrganizations} user={user} orgId={element._id}/>
-                  </Col>
+                  </Col> */}
                   <Col>
                     <FavoriteButton user={user} orgId={element._id} setUser={setUser} />
                   </Col>
